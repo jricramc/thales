@@ -1,31 +1,31 @@
-import Link from "next/link";
-import { TrendingUp, ArrowLeft } from "lucide-react";
-import type { Metadata } from "next";
+import { ArrowLeft, TrendingUp } from 'lucide-react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Thales",
+  title: 'Terms of Service — Thales',
   description:
-    "Thales Terms of Service. Read the terms governing your use of the Thales financial platform.",
+    'Thales Terms of Service. Read the terms governing your use of the Thales financial platform.',
 };
 
-const LAST_UPDATED = "February 24, 2025";
-const CONTACT_EMAIL = "legal@mythales.co";
+const LAST_UPDATED = 'February 24, 2025';
+const CONTACT_EMAIL = 'legal@mythales.co';
 
 const sections = [
-  { id: "acceptance", title: "1. Acceptance of Terms" },
-  { id: "description", title: "2. Description of Services" },
-  { id: "eligibility", title: "3. Eligibility" },
-  { id: "account", title: "4. Account Registration and Security" },
-  { id: "financial-data", title: "5. Financial Data and Plaid Integration" },
-  { id: "acceptable-use", title: "6. Acceptable Use" },
-  { id: "ip", title: "7. Intellectual Property" },
-  { id: "disclaimers", title: "8. Disclaimers" },
-  { id: "liability", title: "9. Limitation of Liability" },
-  { id: "indemnification", title: "10. Indemnification" },
-  { id: "termination", title: "11. Termination" },
-  { id: "governing-law", title: "12. Governing Law and Dispute Resolution" },
-  { id: "changes", title: "13. Changes to These Terms" },
-  { id: "contact", title: "14. Contact Us" },
+  { id: 'acceptance', title: '1. Acceptance of Terms' },
+  { id: 'description', title: '2. Description of Services' },
+  { id: 'eligibility', title: '3. Eligibility' },
+  { id: 'account', title: '4. Account Registration and Security' },
+  { id: 'financial-data', title: '5. Financial Data and Plaid Integration' },
+  { id: 'acceptable-use', title: '6. Acceptable Use' },
+  { id: 'ip', title: '7. Intellectual Property' },
+  { id: 'disclaimers', title: '8. Disclaimers' },
+  { id: 'liability', title: '9. Limitation of Liability' },
+  { id: 'indemnification', title: '10. Indemnification' },
+  { id: 'termination', title: '11. Termination' },
+  { id: 'governing-law', title: '12. Governing Law and Dispute Resolution' },
+  { id: 'changes', title: '13. Changes to These Terms' },
+  { id: 'contact', title: '14. Contact Us' },
 ];
 
 export default function TermsPage() {
@@ -35,9 +35,6 @@ export default function TermsPage() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-primary flex items-center justify-center">
-              <TrendingUp className="w-3.5 h-3.5 text-primary-foreground" />
-            </div>
             <span className="font-display text-lg font-semibold tracking-tight text-foreground">
               Thales
             </span>
@@ -85,7 +82,7 @@ export default function TermsPage() {
                 Terms of Service
               </h1>
               <p className="text-muted-foreground text-sm">
-                Effective date:{" "}
+                Effective date:{' '}
                 <span className="text-foreground font-medium">
                   {LAST_UPDATED}
                 </span>
@@ -107,7 +104,7 @@ export default function TermsPage() {
                 <p>
                   By creating an account, accessing, or using the Services in
                   any manner, you acknowledge that you have read, understood,
-                  and agree to be bound by these Terms and our{" "}
+                  and agree to be bound by these Terms and our{' '}
                   <Link
                     href="/privacy"
                     className="text-primary underline underline-offset-2"
@@ -130,7 +127,9 @@ export default function TermsPage() {
                     Personalized financial insights derived from connected
                     account data
                   </li>
-                  <li>Spending analytics, budget summaries, and net worth tracking</li>
+                  <li>
+                    Spending analytics, budget summaries, and net worth tracking
+                  </li>
                   <li>
                     AI-generated recommendations to help users achieve stated
                     financial goals
@@ -143,11 +142,11 @@ export default function TermsPage() {
                 <p>
                   The Services are intended for personal, non-commercial use.
                   The financial information, insights, and recommendations
-                  provided by Thales are{" "}
+                  provided by Thales are{' '}
                   <strong>
                     for informational and educational purposes only and do not
                     constitute financial, investment, tax, or legal advice.
-                  </strong>{" "}
+                  </strong>{' '}
                   You should consult a qualified financial professional before
                   making any financial decisions.
                 </p>
@@ -155,9 +154,7 @@ export default function TermsPage() {
 
               {/* 3 */}
               <Section id="eligibility" title="3. Eligibility">
-                <p>
-                  To use the Services, you must:
-                </p>
+                <p>To use the Services, you must:</p>
                 <ul>
                   <li>
                     Be at least 18 years of age or the legal age of majority in
@@ -191,13 +188,13 @@ export default function TermsPage() {
                 <p>
                   You are responsible for maintaining the confidentiality of
                   your account credentials and for all activities that occur
-                  under your account. You agree to notify us immediately at{" "}
+                  under your account. You agree to notify us immediately at{' '}
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
                     className="text-primary underline underline-offset-2"
                   >
                     {CONTACT_EMAIL}
-                  </a>{" "}
+                  </a>{' '}
                   of any unauthorized use of your account or any other breach of
                   security. Thales will not be liable for any loss or damage
                   arising from your failure to safeguard your credentials.
@@ -228,13 +225,13 @@ export default function TermsPage() {
                     cannot and will never initiate transactions, move funds,
                     modify account settings, or take any action within your
                     financial accounts.
-                  </strong>{" "}
+                  </strong>{' '}
                   Your bank credentials are never transmitted to or stored by
                   Thales.
                 </Callout>
                 <p>
                   By connecting your financial accounts, you also agree to
-                  Plaid&apos;s{" "}
+                  Plaid&apos;s{' '}
                   <a
                     href="https://plaid.com/legal/"
                     target="_blank"
@@ -242,8 +239,8 @@ export default function TermsPage() {
                     className="text-primary underline underline-offset-2"
                   >
                     End User Privacy Policy
-                  </a>{" "}
-                  and{" "}
+                  </a>{' '}
+                  and{' '}
                   <a
                     href="https://plaid.com/legal/#terms-of-use"
                     target="_blank"
@@ -256,7 +253,7 @@ export default function TermsPage() {
                 </p>
                 <p>
                   You may disconnect any financial account at any time within
-                  the Services or through Plaid&apos;s user portal at{" "}
+                  the Services or through Plaid&apos;s user portal at{' '}
                   <a
                     href="https://my.plaid.com"
                     target="_blank"
@@ -346,22 +343,24 @@ export default function TermsPage() {
               <Section id="disclaimers" title="8. Disclaimers">
                 <p>
                   THE SERVICES ARE PROVIDED &quot;AS IS&quot; AND &quot;AS
-                  AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EITHER
-                  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
+                  AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS
+                  OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
                   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
                   NON-INFRINGEMENT, OR ACCURACY OF INFORMATION.
                 </p>
                 <p>
                   THALES DOES NOT WARRANT THAT THE SERVICES WILL BE
-                  UNINTERRUPTED, ERROR-FREE, OR SECURE, OR THAT ANY DEFECTS
-                  WILL BE CORRECTED. WE DO NOT WARRANT THE ACCURACY,
-                  COMPLETENESS, OR RELIABILITY OF ANY FINANCIAL DATA,
-                  INSIGHTS, OR RECOMMENDATIONS PROVIDED THROUGH THE SERVICES.
+                  UNINTERRUPTED, ERROR-FREE, OR SECURE, OR THAT ANY DEFECTS WILL
+                  BE CORRECTED. WE DO NOT WARRANT THE ACCURACY, COMPLETENESS, OR
+                  RELIABILITY OF ANY FINANCIAL DATA, INSIGHTS, OR
+                  RECOMMENDATIONS PROVIDED THROUGH THE SERVICES.
                 </p>
                 <p>
                   The financial insights and recommendations provided by Thales
-                  are generated by AI models and are{" "}
-                  <strong>not a substitute for professional financial advice.</strong>{" "}
+                  are generated by AI models and are{' '}
+                  <strong>
+                    not a substitute for professional financial advice.
+                  </strong>{' '}
                   Thales is not a registered investment advisor, broker-dealer,
                   financial planner, or tax advisor. You should consult with a
                   qualified professional before making any financial decision.
@@ -371,14 +370,14 @@ export default function TermsPage() {
               {/* 9 */}
               <Section id="liability" title="9. Limitation of Liability">
                 <p>
-                  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THALES,
-                  ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS,
-                  SUPPLIERS, AND LICENSORS SHALL NOT BE LIABLE FOR ANY INDIRECT,
+                  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THALES, ITS
+                  AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, SUPPLIERS,
+                  AND LICENSORS SHALL NOT BE LIABLE FOR ANY INDIRECT,
                   INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY
-                  DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, REVENUE,
-                  DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR
-                  IN CONNECTION WITH YOUR USE OF OR INABILITY TO USE THE
-                  SERVICES.
+                  DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS,
+                  REVENUE, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING
+                  OUT OF OR IN CONNECTION WITH YOUR USE OF OR INABILITY TO USE
+                  THE SERVICES.
                 </p>
                 <p>
                   IN NO EVENT SHALL THALES&apos;S AGGREGATE LIABILITY FOR ALL
@@ -412,14 +411,13 @@ export default function TermsPage() {
               {/* 11 */}
               <Section id="termination" title="11. Termination">
                 <p>
-                  We may suspend or terminate your access to the Services at
-                  any time, with or without cause or notice, including for
-                  violation of these Terms. Upon termination, your right to use
-                  the Services immediately ceases.
+                  We may suspend or terminate your access to the Services at any
+                  time, with or without cause or notice, including for violation
+                  of these Terms. Upon termination, your right to use the
+                  Services immediately ceases.
                 </p>
                 <p>
-                  You may terminate your account at any time by contacting us
-                  at{" "}
+                  You may terminate your account at any time by contacting us at{' '}
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
                     className="text-primary underline underline-offset-2"
@@ -427,7 +425,7 @@ export default function TermsPage() {
                     {CONTACT_EMAIL}
                   </a>
                   . Upon account deletion, we will handle your data in
-                  accordance with our{" "}
+                  accordance with our{' '}
                   <Link
                     href="/privacy"
                     className="text-primary underline underline-offset-2"
@@ -489,8 +487,8 @@ export default function TermsPage() {
               {/* 14 */}
               <Section id="contact" title="14. Contact Us">
                 <p>
-                  If you have any questions about these Terms, please contact
-                  us at:
+                  If you have any questions about these Terms, please contact us
+                  at:
                 </p>
                 <div className="mt-4 p-5 rounded-xl border border-border bg-muted/50 text-sm leading-loose">
                   <strong className="text-foreground">Thales</strong>
@@ -531,15 +529,15 @@ export default function TermsPage() {
       <footer className="border-t border-border py-8 px-6 mt-8">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-5 h-5 rounded bg-primary flex items-center justify-center">
-              <TrendingUp className="w-3 h-3 text-primary-foreground" />
-            </div>
             <span className="font-display text-base font-semibold text-foreground">
               Thales
             </span>
           </div>
           <div className="flex items-center gap-5 text-sm text-muted-foreground">
-            <Link href="/privacy" className="hover:text-foreground transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-foreground transition-colors"
+            >
               Privacy Policy
             </Link>
             <Link href="/terms" className="text-foreground font-medium">

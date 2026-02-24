@@ -1,28 +1,28 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
 import {
+  AnimatePresence,
   motion,
   useScroll,
-  AnimatePresence,
   type Variants,
-} from "framer-motion";
-import Link from "next/link";
+} from 'framer-motion';
 import {
+  ArrowRight,
   BarChart3,
   Brain,
+  CheckCircle2,
+  ChevronDown,
+  Eye,
   Lock,
+  Menu,
   Shield,
   Target,
   TrendingUp,
-  ArrowRight,
-  ChevronDown,
-  CheckCircle2,
-  Zap,
-  Eye,
   X,
-  Menu,
-} from "lucide-react";
+  Zap,
+} from 'lucide-react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 // ─── Animation variants ────────────────────────────────────────────────────
 
@@ -37,7 +37,7 @@ const fadeUp: Variants = {
 
 const fadeIn: Variants = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.5, ease: "easeOut" as const } },
+  show: { opacity: 1, transition: { duration: 0.5, ease: 'easeOut' as const } },
 };
 
 const staggerContainer = (stagger = 0.1, delayChildren = 0): Variants => ({
@@ -55,28 +55,25 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    return scrollY.on("change", (v) => setScrolled(v > 20));
+    return scrollY.on('change', (v) => setScrolled(v > 20));
   }, [scrollY]);
 
-  const links = ["Features", "Security", "Waitlist"];
+  const links = ['Features', 'Security', 'Waitlist'];
 
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent"
+          ? 'bg-background/90 backdrop-blur-md border-b border-border shadow-sm'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center">
-            <TrendingUp className="w-4 h-4 text-primary-foreground" />
-          </div>
           <span className="font-display text-xl font-700 tracking-tight text-foreground">
             Thales
           </span>
@@ -123,7 +120,7 @@ function Navbar() {
         {menuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
             className="md:hidden bg-background border-b border-border overflow-hidden"
@@ -168,9 +165,9 @@ function HeroSection() {
             linear-gradient(to right, var(--color-border) 1px, transparent 1px),
             linear-gradient(to bottom, var(--color-border) 1px, transparent 1px)
           `,
-          backgroundSize: "64px 64px",
+          backgroundSize: '64px 64px',
           maskImage:
-            "radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%)",
+            'radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%)',
         }}
       />
 
@@ -179,7 +176,7 @@ function HeroSection() {
         className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse, color-mix(in oklab, var(--color-primary) 12%, transparent) 0%, transparent 70%)",
+            'radial-gradient(ellipse, color-mix(in oklab, var(--color-primary) 12%, transparent) 0%, transparent 70%)',
         }}
       />
 
@@ -209,7 +206,7 @@ function HeroSection() {
           <motion.span
             variants={fadeUp}
             className="block"
-            style={{ color: "var(--color-primary)" }}
+            style={{ color: 'var(--color-primary)' }}
           >
             finally understood.
           </motion.span>
@@ -279,7 +276,7 @@ function HeroSection() {
       >
         <motion.div
           animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+          transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
         >
           <ChevronDown className="w-5 h-5 text-muted-foreground/50" />
         </motion.div>
@@ -293,37 +290,37 @@ function HeroSection() {
 const features = [
   {
     icon: Brain,
-    title: "Personalized Insights",
+    title: 'Personalized Insights',
     description:
-      "AI models trained on your financial patterns surface insights tailored to your spending habits, income cycles, and goals — not generic advice.",
+      'AI models trained on your financial patterns surface insights tailored to your spending habits, income cycles, and goals — not generic advice.',
   },
   {
     icon: BarChart3,
-    title: "Real-Time Analytics",
+    title: 'Real-Time Analytics',
     description:
-      "Visualize your cash flow, net worth evolution, and spending categories with live data pulled securely from your connected accounts.",
+      'Visualize your cash flow, net worth evolution, and spending categories with live data pulled securely from your connected accounts.',
   },
   {
     icon: Target,
-    title: "Goal-Driven Recommendations",
+    title: 'Goal-Driven Recommendations',
     description:
-      "Set savings targets, debt payoff timelines, or investment goals. Thales crafts an actionable plan and keeps you on track automatically.",
+      'Set savings targets, debt payoff timelines, or investment goals. Thales crafts an actionable plan and keeps you on track automatically.',
   },
   {
     icon: Zap,
-    title: "Instant Alerts",
+    title: 'Instant Alerts',
     description:
-      "Get notified about unusual spending, upcoming bills, low balances, and opportunities to optimize — before they become problems.",
+      'Get notified about unusual spending, upcoming bills, low balances, and opportunities to optimize — before they become problems.',
   },
   {
     icon: Eye,
-    title: "Full Visibility",
+    title: 'Full Visibility',
     description:
-      "See every account, card, and investment in one place. No more switching between apps or losing track of where your money actually goes.",
+      'See every account, card, and investment in one place. No more switching between apps or losing track of where your money actually goes.',
   },
   {
     icon: TrendingUp,
-    title: "Financial Trajectory",
+    title: 'Financial Trajectory',
     description:
       "Understand not just where you are today, but where you're heading. Thales projects your financial future based on current patterns.",
   },
@@ -338,7 +335,7 @@ function FeaturesSection() {
           variants={staggerContainer(0.08)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, margin: '-80px' }}
           className="text-center mb-16"
         >
           <motion.p
@@ -368,7 +365,7 @@ function FeaturesSection() {
           variants={staggerContainer(0.08)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, margin: '-60px' }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {features.map((feature) => {
@@ -403,23 +400,23 @@ function FeaturesSection() {
 const trustItems = [
   {
     icon: Shield,
-    label: "Plaid-powered connection",
-    desc: "Industry-standard, read-only bank access. We never see your credentials.",
+    label: 'Plaid-powered connection',
+    desc: 'Industry-standard, read-only bank access. We never see your credentials.',
   },
   {
     icon: Lock,
-    label: "Data never sold or shared",
-    desc: "Your financial data is used only to power the app — nothing else, ever.",
+    label: 'Data never sold or shared',
+    desc: 'Your financial data is used only to power the app — nothing else, ever.',
   },
   {
     icon: Eye,
-    label: "Transparent access",
-    desc: "Access is limited to authorized systems with full audit trails.",
+    label: 'Transparent access',
+    desc: 'Access is limited to authorized systems with full audit trails.',
   },
   {
     icon: CheckCircle2,
-    label: "Industry-standard encryption",
-    desc: "Data in transit and at rest is encrypted following security best practices.",
+    label: 'Industry-standard encryption',
+    desc: 'Data in transit and at rest is encrypted following security best practices.',
   },
 ];
 
@@ -428,7 +425,7 @@ function SecuritySection() {
     <section
       id="security"
       className="py-28 px-6 border-y border-border"
-      style={{ background: "var(--color-muted)" }}
+      style={{ background: 'var(--color-muted)' }}
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left: text */}
@@ -436,7 +433,7 @@ function SecuritySection() {
           variants={staggerContainer(0.1)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, margin: '-80px' }}
         >
           <motion.p
             variants={fadeUp}
@@ -480,7 +477,7 @@ function SecuritySection() {
           variants={staggerContainer(0.1)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, margin: '-60px' }}
           className="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
           {trustItems.map((item) => {
@@ -512,17 +509,17 @@ function SecuritySection() {
 // ─── Waitlist ─────────────────────────────────────────────────────────────────
 
 function WaitlistSection() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !email.includes("@")) {
-      setStatus("error");
+    if (!email || !email.includes('@')) {
+      setStatus('error');
       return;
     }
-    setStatus("success");
-    setEmail("");
+    setStatus('success');
+    setEmail('');
   };
 
   return (
@@ -532,9 +529,9 @@ function WaitlistSection() {
           variants={staggerContainer(0.1)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, margin: '-80px' }}
           className="relative rounded-3xl overflow-hidden"
-          style={{ background: "var(--color-primary)" }}
+          style={{ background: 'var(--color-primary)' }}
         >
           {/* Decorative background pattern */}
           <div
@@ -544,7 +541,7 @@ function WaitlistSection() {
                 linear-gradient(to right, white 1px, transparent 1px),
                 linear-gradient(to bottom, white 1px, transparent 1px)
               `,
-              backgroundSize: "48px 48px",
+              backgroundSize: '48px 48px',
             }}
           />
 
@@ -552,14 +549,14 @@ function WaitlistSection() {
             <motion.p
               variants={fadeUp}
               className="text-sm font-medium uppercase tracking-widest mb-4 opacity-70"
-              style={{ color: "var(--color-primary-foreground)" }}
+              style={{ color: 'var(--color-primary-foreground)' }}
             >
               Early access
             </motion.p>
             <motion.h2
               variants={fadeUp}
               className="font-display text-4xl sm:text-5xl font-700 leading-tight mb-4"
-              style={{ color: "var(--color-primary-foreground)" }}
+              style={{ color: 'var(--color-primary-foreground)' }}
             >
               Be first to take control
               <br />
@@ -568,7 +565,7 @@ function WaitlistSection() {
             <motion.p
               variants={fadeUp}
               className="text-lg mb-10 max-w-lg mx-auto opacity-80"
-              style={{ color: "var(--color-primary-foreground)" }}
+              style={{ color: 'var(--color-primary-foreground)' }}
             >
               Join the waitlist and get notified the moment Thales is ready for
               you.
@@ -584,7 +581,7 @@ function WaitlistSection() {
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
-                  setStatus("idle");
+                  setStatus('idle');
                 }}
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-xl text-sm text-foreground bg-background/95 border border-white/20 placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-white/40"
@@ -600,27 +597,27 @@ function WaitlistSection() {
             </motion.form>
 
             <AnimatePresence mode="wait">
-              {status === "success" && (
+              {status === 'success' && (
                 <motion.p
                   key="success"
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   className="mt-4 text-sm flex items-center justify-center gap-1.5 opacity-90"
-                  style={{ color: "var(--color-primary-foreground)" }}
+                  style={{ color: 'var(--color-primary-foreground)' }}
                 >
                   <CheckCircle2 className="w-4 h-4" />
                   You&apos;re on the list! We&apos;ll be in touch soon.
                 </motion.p>
               )}
-              {status === "error" && (
+              {status === 'error' && (
                 <motion.p
                   key="error"
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   className="mt-4 text-sm opacity-90"
-                  style={{ color: "var(--color-primary-foreground)" }}
+                  style={{ color: 'var(--color-primary-foreground)' }}
                 >
                   Please enter a valid email address.
                 </motion.p>
@@ -630,7 +627,7 @@ function WaitlistSection() {
             <motion.p
               variants={fadeIn}
               className="mt-6 text-xs opacity-50"
-              style={{ color: "var(--color-primary-foreground)" }}
+              style={{ color: 'var(--color-primary-foreground)' }}
             >
               No spam. Unsubscribe anytime.
             </motion.p>
@@ -649,9 +646,6 @@ function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-primary flex items-center justify-center">
-            <TrendingUp className="w-3.5 h-3.5 text-primary-foreground" />
-          </div>
           <span className="font-display text-lg font-700 tracking-tight text-foreground">
             Thales
           </span>
@@ -659,13 +653,22 @@ function Footer() {
 
         {/* Links */}
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
-          <Link href="/privacy" className="hover:text-foreground transition-colors">
+          <Link
+            href="/privacy"
+            className="hover:text-foreground transition-colors"
+          >
             Privacy
           </Link>
-          <Link href="/terms" className="hover:text-foreground transition-colors">
+          <Link
+            href="/terms"
+            className="hover:text-foreground transition-colors"
+          >
             Terms
           </Link>
-          <a href="mailto:hello@mythales.co" className="hover:text-foreground transition-colors">
+          <a
+            href="mailto:hello@mythales.co"
+            className="hover:text-foreground transition-colors"
+          >
             Contact
           </a>
         </div>

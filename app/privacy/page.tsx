@@ -1,29 +1,29 @@
-import Link from "next/link";
-import { TrendingUp, ArrowLeft } from "lucide-react";
-import type { Metadata } from "next";
+import { ArrowLeft } from 'lucide-react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Thales",
+  title: 'Privacy Policy — Thales',
   description:
-    "Thales Privacy Policy. Learn how we collect, use, and protect your financial data.",
+    'Thales Privacy Policy. Learn how we collect, use, and protect your financial data.',
 };
 
-const LAST_UPDATED = "February 24, 2025";
-const CONTACT_EMAIL = "privacy@mythales.co";
+const LAST_UPDATED = 'February 24, 2025';
+const CONTACT_EMAIL = 'privacy@mythales.co';
 
 const sections = [
-  { id: "introduction", title: "1. Introduction" },
-  { id: "information-we-collect", title: "2. Information We Collect" },
-  { id: "how-we-use", title: "3. How We Use Your Information" },
-  { id: "how-we-do-not-use", title: "4. What We Do Not Do With Your Data" },
-  { id: "plaid", title: "5. Plaid and Financial Data Access" },
-  { id: "data-security", title: "6. Data Security" },
-  { id: "data-retention", title: "7. Data Retention" },
-  { id: "your-rights", title: "8. Your Rights and Choices" },
-  { id: "children", title: "9. Children's Privacy" },
-  { id: "third-parties", title: "10. Third-Party Links and Services" },
-  { id: "changes", title: "11. Changes to This Policy" },
-  { id: "contact", title: "12. Contact Us" },
+  { id: 'introduction', title: '1. Introduction' },
+  { id: 'information-we-collect', title: '2. Information We Collect' },
+  { id: 'how-we-use', title: '3. How We Use Your Information' },
+  { id: 'how-we-do-not-use', title: '4. What We Do Not Do With Your Data' },
+  { id: 'plaid', title: '5. Plaid and Financial Data Access' },
+  { id: 'data-security', title: '6. Data Security' },
+  { id: 'data-retention', title: '7. Data Retention' },
+  { id: 'your-rights', title: '8. Your Rights and Choices' },
+  { id: 'children', title: "9. Children's Privacy" },
+  { id: 'third-parties', title: '10. Third-Party Links and Services' },
+  { id: 'changes', title: '11. Changes to This Policy' },
+  { id: 'contact', title: '12. Contact Us' },
 ];
 
 export default function PrivacyPage() {
@@ -33,9 +33,6 @@ export default function PrivacyPage() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-primary flex items-center justify-center">
-              <TrendingUp className="w-3.5 h-3.5 text-primary-foreground" />
-            </div>
             <span className="font-display text-lg font-semibold tracking-tight text-foreground">
               Thales
             </span>
@@ -83,7 +80,7 @@ export default function PrivacyPage() {
                 Privacy Policy
               </h1>
               <p className="text-muted-foreground text-sm">
-                Effective date:{" "}
+                Effective date:{' '}
                 <span className="text-foreground font-medium">
                   {LAST_UPDATED}
                 </span>
@@ -94,8 +91,8 @@ export default function PrivacyPage() {
               {/* 1 */}
               <Section id="introduction" title="1. Introduction">
                 <p>
-                  Thales (&quot;Thales,&quot; &quot;we,&quot; &quot;us,&quot;
-                  or &quot;our&quot;) operates a personal finance management
+                  Thales (&quot;Thales,&quot; &quot;we,&quot; &quot;us,&quot; or
+                  &quot;our&quot;) operates a personal finance management
                   platform that provides users with personalized financial
                   insights, analytics, and recommendations. This Privacy Policy
                   describes how we collect, use, disclose, and safeguard your
@@ -109,11 +106,11 @@ export default function PrivacyPage() {
                   Services.
                 </p>
                 <p>
-                  Our core principle is simple:{" "}
+                  Our core principle is simple:{' '}
                   <strong>
                     your financial data belongs to you and is used only to
                     deliver the functionality you explicitly request.
-                  </strong>{" "}
+                  </strong>{' '}
                   We do not sell your data, use it for advertising, or share it
                   with any third party for commercial purposes.
                 </p>
@@ -147,7 +144,9 @@ export default function PrivacyPage() {
                     Account balances and account identifiers (e.g., last four
                     digits of account numbers)
                   </li>
-                  <li>Transaction history, including amount, date, and merchant</li>
+                  <li>
+                    Transaction history, including amount, date, and merchant
+                  </li>
                   <li>Account type and institution name</li>
                   <li>
                     Income and payroll data (only if you explicitly enable such
@@ -159,7 +158,7 @@ export default function PrivacyPage() {
                     Thales never receives, stores, or has access to your bank
                     login credentials (username, password, or security
                     questions).
-                  </strong>{" "}
+                  </strong>{' '}
                   All authentication with your financial institution is handled
                   exclusively by Plaid through their secure, encrypted
                   infrastructure.
@@ -172,8 +171,12 @@ export default function PrivacyPage() {
                 </p>
                 <ul>
                   <li>IP address and approximate geographic location</li>
-                  <li>Browser type, operating system, and device identifiers</li>
-                  <li>Pages visited, features used, and interaction timestamps</li>
+                  <li>
+                    Browser type, operating system, and device identifiers
+                  </li>
+                  <li>
+                    Pages visited, features used, and interaction timestamps
+                  </li>
                   <li>
                     Error logs and crash reports to improve Service reliability
                   </li>
@@ -189,8 +192,8 @@ export default function PrivacyPage() {
                 </p>
                 <ul>
                   <li>
-                    Generate personalized financial insights, spending summaries,
-                    and budget analytics
+                    Generate personalized financial insights, spending
+                    summaries, and budget analytics
                   </li>
                   <li>
                     Deliver AI-driven recommendations relevant to your stated
@@ -225,18 +228,22 @@ export default function PrivacyPage() {
                 </p>
                 <ul>
                   <li>
-                    <strong>We do not sell your personal or financial data</strong>{" "}
+                    <strong>
+                      We do not sell your personal or financial data
+                    </strong>{' '}
                     to any third party under any circumstances.
                   </li>
                   <li>
                     <strong>
-                      We do not share your data with advertisers or data brokers.
+                      We do not share your data with advertisers or data
+                      brokers.
                     </strong>
                   </li>
                   <li>
                     <strong>
-                      We do not use your financial data for targeted advertising,
-                    </strong>{" "}
+                      We do not use your financial data for targeted
+                      advertising,
+                    </strong>{' '}
                     behavioral profiling, or any commercial purpose other than
                     delivering the Services.
                   </li>
@@ -244,29 +251,26 @@ export default function PrivacyPage() {
                     <strong>
                       We do not train general-purpose AI models on your personal
                       financial data
-                    </strong>{" "}
+                    </strong>{' '}
                     without your explicit, informed consent.
                   </li>
                   <li>
                     <strong>
-                      We do not access your full account numbers, routing numbers,
-                      or login credentials.
-                    </strong>{" "}
+                      We do not access your full account numbers, routing
+                      numbers, or login credentials.
+                    </strong>{' '}
                     This information is never transmitted to Thales systems.
                   </li>
                 </ul>
               </Section>
 
               {/* 5 */}
-              <Section
-                id="plaid"
-                title="5. Plaid and Financial Data Access"
-              >
+              <Section id="plaid" title="5. Plaid and Financial Data Access">
                 <p>
                   Thales uses Plaid to establish a read-only connection to your
                   financial accounts. &quot;Read-only&quot; means that Thales
                   and Plaid can retrieve account information and transaction
-                  data on your behalf, but{" "}
+                  data on your behalf, but{' '}
                   <strong>
                     cannot initiate transactions, move funds, or modify your
                     accounts in any way.
@@ -274,7 +278,7 @@ export default function PrivacyPage() {
                 </p>
                 <p>
                   When you connect a financial account through Thales, you are
-                  subject to Plaid&apos;s End User Privacy Policy, available at{" "}
+                  subject to Plaid&apos;s End User Privacy Policy, available at{' '}
                   <a
                     href="https://plaid.com/legal/#end-user-privacy-policy"
                     target="_blank"
@@ -289,7 +293,7 @@ export default function PrivacyPage() {
                 <Callout>
                   You may revoke Thales&apos;s access to your financial accounts
                   at any time by disconnecting your accounts within the
-                  application or directly through your Plaid portal at{" "}
+                  application or directly through your Plaid portal at{' '}
                   <a
                     href="https://my.plaid.com"
                     target="_blank"
@@ -312,9 +316,7 @@ export default function PrivacyPage() {
                   destruction. These measures include:
                 </p>
                 <ul>
-                  <li>
-                    Encryption of data in transit using TLS 1.2 or higher
-                  </li>
+                  <li>Encryption of data in transit using TLS 1.2 or higher</li>
                   <li>
                     Encryption of sensitive data at rest using AES-256 or
                     equivalent standards
@@ -365,7 +367,7 @@ export default function PrivacyPage() {
                 </ul>
                 <p>
                   To request deletion of your account and associated data,
-                  contact us at{" "}
+                  contact us at{' '}
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
                     className="text-primary underline underline-offset-2"
@@ -410,7 +412,7 @@ export default function PrivacyPage() {
                   </li>
                 </ul>
                 <p>
-                  To exercise any of the above rights, please contact us at{" "}
+                  To exercise any of the above rights, please contact us at{' '}
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
                     className="text-primary underline underline-offset-2"
@@ -431,7 +433,7 @@ export default function PrivacyPage() {
                   inadvertently collected information from a minor, we will take
                   prompt steps to delete such information. If you believe a
                   minor has provided us with personal information, please
-                  contact us at{" "}
+                  contact us at{' '}
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
                     className="text-primary underline underline-offset-2"
@@ -524,9 +526,6 @@ export default function PrivacyPage() {
       <footer className="border-t border-border py-8 px-6 mt-8">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-5 h-5 rounded bg-primary flex items-center justify-center">
-              <TrendingUp className="w-3 h-3 text-primary-foreground" />
-            </div>
             <span className="font-display text-base font-semibold text-foreground">
               Thales
             </span>
@@ -535,7 +534,10 @@ export default function PrivacyPage() {
             <Link href="/privacy" className="text-foreground font-medium">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-foreground transition-colors">
+            <Link
+              href="/terms"
+              className="hover:text-foreground transition-colors"
+            >
               Terms of Service
             </Link>
           </div>
